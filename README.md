@@ -72,4 +72,4 @@ This source-only distribution includes a **reconstructed snapshot history** (v1 
 
 ## License
 
-No project-level license has been granted by the original author. External datasets and model have their own terms; consult [`docs/methodology.md`](docs/methodology.md). Add a repository LICENSE only after selecting one deliberately.
+This project’s original code is licensed under the [MIT License](LICENSE). This license does not extend to external datasets, model weights, or third-party materials; consult [`docs/methodology.md`](docs/methodology.md) and each source’s terms before using or redistributing them.

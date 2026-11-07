@@ -11,6 +11,7 @@ __pycache__/
 data/
 outputs/
 reports/
+legacy/
 wandb/
 .DS_Store
 # uv.lock can be committed once generated/reviewed; not included in source-only package
