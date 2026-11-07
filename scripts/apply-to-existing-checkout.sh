@@ -7,8 +7,8 @@ target="${1:-}"
 [[ -n "$target" && -d "$target/.git" ]] || { echo 'Usage: bash scripts/apply-to-existing-checkout.sh /path/to/your/old/git-checkout' >&2; exit 2; }
 command -v rsync >/dev/null || { echo 'rsync is required' >&2; exit 1; }
 [[ "$(cd "$target" && pwd)" != "$source_root" ]] || { echo 'Use a different target checkout' >&2; exit 2; }
-if [[ -n "$(git -C "$target" status --porcelain)" ]]; then
-  echo 'Target has uncommitted changes. Commit or stash first; refusing to overwrite.' >&2
+if ! git -C "$target" diff --quiet || ! git -C "$target" diff --cached --quiet; then
+  echo 'Target has modified tracked files. Commit or stash them first; refusing to overwrite.' >&2
   exit 1
 fi
 printf 'Updating source files in %s (preserving .git and generated data)
