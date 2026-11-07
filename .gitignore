@@ -9,3 +9,10 @@ __pycache__/
 /reports/
 /wandb/
 *.egg-info/
+
+# External datasets and v2 artifacts
+data/external/
+data/v2/
+outputs/v2/
+reports/v2/
+wandb/
