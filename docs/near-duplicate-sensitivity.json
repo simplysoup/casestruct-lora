@@ -1,0 +1,43 @@
+{
+  "task": "osha",
+  "candidate": {
+    "splits": [
+      "train",
+      "test"
+    ],
+    "string_similarity": 0.9127,
+    "shingle_jaccard": 0.1875
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 71
+  },
+  "full_test": {
+    "n": 333,
+    "strongest_baseline": "base-fewshot",
+    "baseline_macro_f1": 0.6401132913412544,
+    "v2_constrained_macro_f1": 0.8005140940116136,
+    "gain_macro_f1": 0.16040080267035917,
+    "gain_ci95_macro_f1": [
+      0.09230644480452564,
+      0.22079664541077748
+    ]
+  },
+  "without_candidate": {
+    "n": 332,
+    "strongest_baseline": "base-fewshot",
+    "baseline_macro_f1": 0.640021623656058,
+    "v2_constrained_macro_f1": 0.8004818442696114,
+    "gain_macro_f1": 0.16046022061355347,
+    "gain_ci95_macro_f1": [
+      0.09331749233285754,
+      0.22130927745930049
+    ]
+  },
+  "effect_percentage_points": {
+    "v2_constrained_macro_f1": -0.0032249742002110615,
+    "gain_macro_f1": 0.005941794319430649,
+    "gain_ci95_lower": 0.10110475283318932,
+    "gain_ci95_upper": 0.051263204852300404
+  }
+}
