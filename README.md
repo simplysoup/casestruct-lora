@@ -5,13 +5,13 @@
 CaseStruct trains a Qwen3-0.6B adapter using [PEFT](https://github.com/huggingface/peft) and [TRL](https://github.com/huggingface/trl) and evaluates two distinct tasks: construction accident type (ConstructCIE) and occupational injury nature (OSHA Severe Injury Reports). The earlier synthetic legal-intake prototype remains in `src/casestruct/` for historical reproducibility. **Neither external benchmark is a legal-document dataset.** The system is not validated for legal, clinical, or safety-critical use.
 
 **Key takeaways**
-- OSHA injury nature: 80.1% macro-F1, +16.0 pp over the strongest baseline (95% CI [9.2, 22.1], n=333).
+- OSHA injury nature: 80.1% macro-F1, +16.0 pp over the strongest baseline (95% CI [+9.2, +22.1], n=333).
 - ConstructCIE accident type: +11.0 pp but only 80 test cases; treat as suggestive.
-- Exploratory results: the test split was inspected during development. See the Clean holdout section; no clean-holdout estimate is available yet.
+- Exploratory results: the test split was inspected during development, and no clean-holdout estimate is available yet (see [`docs/results.md`](docs/results.md)).
 
 ![Exploratory reported macro-F1 results for OSHA and ConstructCIE](docs/results-summary.svg)
 
-The OSHA result is the stronger interview headline. ConstructCIE's 80-case result is suggestive, not conclusive: its reported 95% paired-bootstrap interval has a lower bound of only +1.7 percentage points.
+ConstructCIE's 80-case result is suggestive, not conclusive: its 95% paired-bootstrap interval has a lower bound of only +1.7 percentage points.
 
 ## At a glance
 
@@ -69,7 +69,7 @@ data/, outputs/, reports/    generated locally; ignored by git
 - Dataset preparation uses seed 71, grouped normalized narratives and task-specific label stratification. Hashes and label vocabularies are written to `data/v2/manifest.json`.
 - v2 training uses a prompt/completion dataset, `completion_only_loss=True`, and LoRA rank 8 / alpha 16. The saved v2 training run used W&B offline logging; no public run URL is available. The TRL collator was checked on a batch of 32 prepared training examples: every prompt token was labeled `-100`, and every token in every completion (including EOS) was supervised. `tests/test_training_mask.py` verifies the supervised-token count against each tokenized completion. This confirms the checked-in code path, not historical training runs or checkpoint provenance.
 - v2.1 evaluates base, v1, and v2 × zero-shot, four-shot, and constrained label scoring. Constrained choice uses total conditional log-likelihood; length-normalized scores are secondary. Strict JSON validity is N/A for the constrained method.
-- v2.1 audit stops on cross-split exact duplicates, very high near-duplicate similarity, manifest inconsistencies, or checked-in training-source concerns. It is not proof of zero semantic leakage.
+- The latest audit found 0 exact cross-split duplicates and 1 near-duplicate candidate (max similarity 0.9127, below the 0.95 stop threshold). The candidate spans OSHA train/test; excluding the test-side row changes v2-constrained macro-F1 from 80.0514% to 80.0482% (-0.0032 pp; n=333 to 332). See [`docs/near-duplicate-sensitivity.json`](docs/near-duplicate-sensitivity.json). The audit also checks manifest consistency and training-source concerns; it is not proof of zero semantic leakage.
 - Bootstrap comparisons use paired case IDs and a fixed label vocabulary. `docs/error-analysis.md` summarizes a single-reviewer sample; the complete local review CSV remains uncommitted and unadjudicated.
 
 For provenance, commands and limitations, read [`docs/methodology.md`](docs/methodology.md). Full evaluation outputs can be generated locally with `bash run.sh evaluate`; generated per-example reports are intentionally not committed because they contain source narratives and sensitive descriptions. A new clean holdout should be collected only after freezing the model, label mapping, and analysis plan; see [`docs/results.md`](docs/results.md).
