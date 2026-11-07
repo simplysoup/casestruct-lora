@@ -110,7 +110,7 @@ def prepare(root='data/external', output='data/v2', seed=71, osha_classes=8):
     c, o = root/'constructcie.jsonl', root/'osha_sir.jsonl'
     for p in (c,o):
         if not p.exists():
-            raise FileNotFoundError(f'Missing {p}; run ./fetch.sh first')
+            raise FileNotFoundError(f'Missing {p}; run bash run.sh fetch first')
     rows = parse_constructcie(load_jsonl(c)) + parse_osha(load_jsonl(o), osha_classes)
     splits = grouped_split(rows, seed)
     classes = {task: sorted({r['label'] for r in rows if r['task'] == task}) for task in TASKS}

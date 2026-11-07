@@ -6,7 +6,7 @@ command -v uv >/dev/null || { echo 'uv must be installed'; exit 1; }
 if [[ -f .env ]]; then set -a; source .env; set +a; fi
 export WANDB_MODE="${WANDB_MODE:-offline}"
 MODE="${1:-all}"
-[[ "$MODE" =~ ^(all|quick|report|audit)$ ]] || { echo 'Usage: bash run_v21.sh [all|quick|report|audit]'; exit 2; }
+[[ "$MODE" =~ ^(all|quick|report|audit)$ ]] || { echo 'Usage: bash scripts/v21.sh [all|quick|report|audit]'; exit 2; }
 uv sync --extra dev
 uv run pytest -q
 [[ -f data/v2/train.jsonl && -f data/v2/validation.jsonl && -f data/v2/test.jsonl && -f data/v2/manifest.json ]] || { echo 'Missing data/v2. Run v2 data preparation first.'; exit 1; }
@@ -31,7 +31,7 @@ for MODEL in base v1 v2; do
   done
 done
 if [[ "$MODE" == quick ]]; then
-  echo 'Quick sample written; final results require bash run_v21.sh all.'
+  echo 'Quick sample written; final results require bash run.sh evaluate.'
 else
   uv run python -m casestruct.v21.report --reps 10000
   echo 'v2.1 reports written to reports/v2.1/'

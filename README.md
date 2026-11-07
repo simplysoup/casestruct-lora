@@ -47,7 +47,7 @@ src/casestruct/external.py  public dataset downloader and normalization
 src/casestruct/v2/          external-data preparation, training, inference, evaluation
 src/casestruct/v21/         audit, 9-condition baselines, statistics, error analysis, demo
 configs/                    reproducible experiment configuration
- tests/                     unit tests (no model weights required)
+tests/                     unit tests (no model weights required)
 docs/                       results, methodology, provenance, publishing notes
 data/, outputs/, reports/    generated locally; ignored by git
 ```

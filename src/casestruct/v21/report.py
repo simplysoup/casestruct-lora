@@ -165,7 +165,7 @@ def run(root='reports/v2.1',data='data/v2',reps=10000):
        '- See `errors_to_review.csv` for balanced, *unreviewed* errors; classifications are proposals, not adjudicated conclusions.',
        '- This is an exploratory holdout because v2 test metrics were viewed before v2.1.',
        '- Do not publish source narratives without checking source redistribution rights and privacy considerations.',
-       '','## Reproduction','','`bash run_v21.sh` executes the audit, all 9 baselines, and this report without retraining.'])
+       '','## Reproduction','','`bash run.sh evaluate` executes the audit, all 9 baselines, and this report without retraining.'])
     (root/'summary.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(root/'summary.md')
 

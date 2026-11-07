@@ -8,7 +8,7 @@ set -a; source .env; set +a
 export WANDB_MODE="${WANDB_MODE:-offline}"
 export PYTHONUNBUFFERED=1
 MODE="${1:-all}"
-if [[ "$MODE" != all && "$MODE" != quick && "$MODE" != evaluate ]]; then echo 'Usage: bash scripts/run_v2.sh [all|quick|evaluate]'; exit 2; fi
+if [[ "$MODE" != all && "$MODE" != quick && "$MODE" != evaluate ]]; then echo 'Usage: bash scripts/v2.sh [all|quick|evaluate]'; exit 2; fi
 printf '\n[setup] Syncing and checking tests\n'
 uv sync --extra dev
 uv run pytest -q
