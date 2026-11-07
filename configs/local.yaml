@@ -1,0 +1,17 @@
+model_id: Qwen/Qwen3-0.6B
+seed: 71
+output_dir: outputs/local
+max_length: 768
+max_new_tokens: 240
+train:
+  epochs: 2
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  logging_steps: 5
+  save_steps: 100
+  eval_steps: 100
+  max_steps: -1

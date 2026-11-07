@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "casestruct-lora"
+version = "0.1.0"
+description = "Locally reproducible LoRA experiment for grounded structured intake extraction"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "torch>=2.5,<3", "transformers>=4.51,<5", "trl>=0.17,<0.29",
+  "peft>=0.15,<0.19", "accelerate>=1.4,<2", "datasets>=3.5,<5",
+  "pydantic>=2.8,<3", "pyyaml>=6,<7", "numpy>=1.26,<3",
+  "safetensors>=0.5", "python-dotenv>=1", "wandb>=0.19,<1",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+[project.scripts]
+casestruct = "casestruct.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/casestruct"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
