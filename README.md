@@ -4,6 +4,11 @@
 
 CaseStruct trains a Qwen3-0.6B adapter using [PEFT](https://github.com/huggingface/peft) and [TRL](https://github.com/huggingface/trl) and evaluates two distinct tasks: construction accident type (ConstructCIE) and occupational injury nature (OSHA Severe Injury Reports). The earlier synthetic legal-intake prototype remains in `src/casestruct/` for historical reproducibility. **Neither external benchmark is a legal-document dataset.** The system is not validated for legal, clinical, or safety-critical use.
 
+**Key takeaways**
+- OSHA injury nature: 80.1% macro-F1, +16.0 pp over the strongest baseline (95% CI [9.2, 22.1], n=333).
+- ConstructCIE accident type: +11.0 pp but only 80 test cases; treat as suggestive.
+- Exploratory results: the test split was inspected during development. See the Clean holdout section; no clean-holdout estimate is available yet.
+
 ![Exploratory reported macro-F1 results for OSHA and ConstructCIE](docs/results-summary.svg)
 
 The OSHA result is the stronger interview headline. ConstructCIE's 80-case result is suggestive, not conclusive: its reported 95% paired-bootstrap interval has a lower bound of only +1.7 percentage points.
@@ -15,7 +20,7 @@ The OSHA result is the stronger interview headline. ConstructCIE's 80-case resul
 | **OSHA injury nature** | 333 | 64.0% (base few-shot) | **80.1%** | **+16.0 pp** [+9.2, +22.1] |
 | ConstructCIE accident type | 80 | 82.1% (v1 zero-shot) | **93.1%** | **+11.0 pp** [+1.7, +21.1] |
 
-These results were regenerated from commit 8ca6f59d1f7313cb7699e16e55b60d067e960016 on 2026-11-07. The test set was inspected during development, so they are not pristine holdout estimates. Confidence intervals use 10,000 paired bootstrap resamples (seed 71), and strongest-baseline selection was retrospective. Do not average the two different tasks. OSHA administrative codes are not always recoverable from narratives. Sanitized results for all nine conditions—including metrics, per-class scores, and confusion counts—are in [`docs/results-aggregate.json`](docs/results-aggregate.json); [`docs/confusion-matrices-v2.svg`](docs/confusion-matrices-v2.svg) visualizes the v2-constrained matrices. Headline values and provenance are in [`docs/results-summary.json`](docs/results-summary.json) and [`docs/results.md`](docs/results.md). Raw narratives and per-example predictions were not copied. The adjudicated error-row sample and caveats are in [`docs/error-analysis.md`](docs/error-analysis.md).
+Results were regenerated on 2026-11-07 from code commit `8ca6f59d1f7313cb7699e16e55b60d067e960016` using `bash run.sh evaluate` with the saved adapters and prepared splits; adapters were not retrained. The test split was inspected during development; 95% intervals use 10,000 paired bootstrap resamples (seed 71), strongest-baseline selection was retrospective, the two tasks must not be averaged, and OSHA administrative codes may not be inferable from narratives. See [`docs/results-aggregate.json`](docs/results-aggregate.json), [`docs/confusion-matrices-v2.svg`](docs/confusion-matrices-v2.svg), [`docs/results-summary.json`](docs/results-summary.json), [`docs/results.md`](docs/results.md), and [`docs/error-analysis.md`](docs/error-analysis.md); raw narratives and per-example predictions remain local.
 
 ![V2 constrained confusion matrices by task](docs/confusion-matrices-v2.svg)
 
@@ -65,7 +70,7 @@ data/, outputs/, reports/    generated locally; ignored by git
 - v2 training uses a prompt/completion dataset, `completion_only_loss=True`, and LoRA rank 8 / alpha 16. The saved v2 training run used W&B offline logging; no public run URL is available. The TRL collator was checked on a batch of 32 prepared training examples: every prompt token was labeled `-100`, and every token in every completion (including EOS) was supervised. `tests/test_training_mask.py` verifies the supervised-token count against each tokenized completion. This confirms the checked-in code path, not historical training runs or checkpoint provenance.
 - v2.1 evaluates base, v1, and v2 × zero-shot, four-shot, and constrained label scoring. Constrained choice uses total conditional log-likelihood; length-normalized scores are secondary. Strict JSON validity is N/A for the constrained method.
 - v2.1 audit stops on cross-split exact duplicates, very high near-duplicate similarity, manifest inconsistencies, or checked-in training-source concerns. It is not proof of zero semantic leakage.
-- Bootstrap comparisons use paired case IDs and a fixed label vocabulary. Error samples are **proposed**, not adjudicated; review `reports/v2.1/errors_to_review.csv` before publication.
+- Bootstrap comparisons use paired case IDs and a fixed label vocabulary. `docs/error-analysis.md` summarizes a single-reviewer sample; the complete local review CSV remains uncommitted and unadjudicated.
 
 For provenance, commands and limitations, read [`docs/methodology.md`](docs/methodology.md). Full evaluation outputs can be generated locally with `bash run.sh evaluate`; generated per-example reports are intentionally not committed because they contain source narratives and sensitive descriptions. A new clean holdout should be collected only after freezing the model, label mapping, and analysis plan; see [`docs/results.md`](docs/results.md).
 

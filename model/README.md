@@ -16,7 +16,7 @@ tags:
 
 ## Status
 
-This card documents the CaseStruct v2 adapter recipe, but **adapter weights are not included or hosted by this repository**. The results below were recovered from saved v2.1 aggregate reports in the adjacent `casestruct-lora-old` archive; evaluation was not rerun. Do not treat this card as a release of model weights.
+This card documents the CaseStruct v2 adapter recipe, but **adapter weights are not included or hosted by this repository**. The results below were regenerated on 2026-11-07 from code commit `8ca6f59d1f7313cb7699e16e55b60d067e960016` using the saved adapters and prepared splits. Do not treat this card as a release of model weights.
 
 ## Intended use
 
@@ -36,7 +36,7 @@ This model is not intended for legal, clinical, employment, insurance, regulator
 
 ## Reported evaluation (exploratory)
 
-The saved v2.1 reports used test sets that had been inspected during development; these are not clean holdouts. The aggregates below were recovered from those reports, not independently rerun.
+The v2.1 evaluation used test sets that had been inspected during development; these are not clean holdouts.
 
 | Task | Test N | v2 constrained macro-F1 | Paired bootstrap gain vs. strongest reported baseline (95% CI) |
 |---|---:|---:|---:|
