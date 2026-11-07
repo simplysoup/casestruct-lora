@@ -20,7 +20,7 @@ PY
 if [[ "$MODE" != evaluate ]]; then
   if [[ ! -f data/external/constructcie.jsonl || ! -f data/external/osha_sir.jsonl ]]; then
     printf '\n[download] Fetching external datasets\n'
-    bash fetch.sh
+    bash scripts/fetch.sh
   fi
   printf '\n[prepare] Preparing split, label vocabularies and manifest\n'
   if [[ ! -f data/v2/manifest.json ]]; then uv run python -m casestruct.v2.data; fi

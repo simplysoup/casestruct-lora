@@ -1,18 +1,16 @@
+# Local state, downloaded data, and model artifacts
 .venv/
 .env
+.env.*
+!.env.example
 __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.pyc
-/data/
-/outputs/
-/reports/
-/wandb/
 *.egg-info/
-
-# External datasets and v2 artifacts
-data/external/
-data/v2/
-outputs/v2/
-reports/v2/
+data/
+outputs/
+reports/
 wandb/
+.DS_Store
+# uv.lock can be committed once generated/reviewed; not included in source-only package
