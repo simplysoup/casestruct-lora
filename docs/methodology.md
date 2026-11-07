@@ -13,12 +13,16 @@ Dataset split logic groups text normalized for case/punctuation and stratifies b
 
 - Base: `Qwen/Qwen3-0.6B`.
 - v1: synthetic legal-intake LoRA adapter, used strictly as a transfer baseline.
-- v2: external-data LoRA adapter, trained locally with rank 8 / alpha 16, using `SFTTrainer` and `completion_only_loss=True` in the checked-in training source.
+- v2: external-data LoRA adapter, described by the checked-in rank 8 / alpha 16 `SFTTrainer` source using `completion_only_loss=True`. The adapter itself is not included here; training-source configuration is not historical checkpoint provenance.
 - Nine conditions: three models × zero-shot greedy JSON, four-shot JSON (demonstrations from train only, fixed seed), and constrained choice using total log likelihood over allowed candidates. Same test IDs and labels across conditions; JSON validity is N/A for constrained choice.
 
-Training: `bash run.sh train-v2` (trains only when no adapter exists). Evaluation only: `bash run.sh audit`, `bash run.sh evaluate`. Use `bash run.sh quick` for a 12-per-task smoke test. Generated metrics, prediction traces, confusion matrices, per-class scores, proposed errors, and paired-bootstrap intervals are written to `reports/v2.1/`.
+Training: `bash run.sh train-v2` (trains only when no adapter exists). Evaluation only: `bash run.sh audit`, `bash run.sh evaluate`. Use `bash run.sh quick` for a 12-per-task smoke test. Generated metrics, prediction traces, confusion matrices, per-class scores, proposed errors, and paired-bootstrap intervals are written to `reports/v2.1/`. Per-example predictions include narratives and are kept local; only sanitized aggregate output should be considered for publication.
 
-All score improvements are exploratory. Original test cases were viewed during v2 development; confidence intervals don't undo this selection risk. The static audit does **not** establish historical token masking, W&B commit provenance, or source redistribution rights. These remain owner sign-off items. The actual training logs are under `wandb/` locally, not shipped. Connect W&B yourself and only then add verified public run links.
+All score improvements are exploratory. Original test cases were viewed during v2 development; confidence intervals do not undo this selection risk. The actual TRL 0.28.0 completion-only collator was checked with the project Qwen tokenizer on a prepared v2 training example: all 187 prompt tokens had labels `-100`, and all 9 completion tokens were supervised. `tests/test_training_mask.py` provides a synthetic, local regression test. The real-example spot check does not verify every historical batch or establish exact checkpoint provenance. Offline W&B run data exists in the adjacent archive, but no verified public W&B URL is available; local run files are not proof of a public or independently verified run. Source redistribution rights still require separate review.
+
+## Clean holdout plan
+
+To make a future generalization claim, collect or designate a new, prospectively held-out sample after the model, label mapping, preprocessing, and analysis plan are frozen. Keep it inaccessible to model selection; deduplicate/group related incidents before splitting; record source/version, collection window, inclusion criteria, and a cryptographic manifest; adjudicate ambiguous labels without exposing model predictions; run every baseline and the frozen model once; and publish aggregate metrics, class counts/confusion matrices, and confidence intervals without narratives or per-case predictions. Report this as a new evaluation, not as a correction to the inspected test set.
 
 ## What is not demonstrated
 

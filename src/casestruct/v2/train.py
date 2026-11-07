@@ -1,20 +1,32 @@
 """Two-task supervised LoRA classification, 8GB GPU starting configuration."""
 from __future__ import annotations
+
 import argparse
 import json
 import os
 from pathlib import Path
+
 from datasets import Dataset
+
 from .data import load_jsonl
-from .prompts import chat_prefix, gold
 from .model import MODEL_ID
+from .prompts import chat_prefix, gold
+
+
+def build_training_dataset(rows, tokenizer, classes):
+    """Build prompt/completion examples for TRL completion-only loss."""
+    return Dataset.from_list([
+        {'prompt': chat_prefix(tokenizer, row, classes),
+         'completion': gold(row) + '<|im_end|>'}
+        for row in rows
+    ])
 
 
 def train(data='data/v2',output='outputs/v2',epochs=2,lr=0.00015,rank=8,max_length=768,model_id=MODEL_ID):
     import torch
-    from transformers import AutoModelForCausalLM,AutoTokenizer
     from peft import LoraConfig
-    from trl import SFTConfig,SFTTrainer
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from trl import SFTConfig, SFTTrainer
     if not torch.cuda.is_available(): raise RuntimeError('CUDA required')
     root=Path(data); classes=json.loads((root/'manifest.json').read_text())['class_names']
     tok=AutoTokenizer.from_pretrained(model_id)
@@ -22,7 +34,7 @@ def train(data='data/v2',output='outputs/v2',epochs=2,lr=0.00015,rank=8,max_leng
     def convert(split):
         rows=list(load_jsonl(root/f'{split}.jsonl'))
         if not rows: raise RuntimeError(f'Empty {split} data')
-        return Dataset.from_list([{'prompt':chat_prefix(tok,r,classes),'completion':gold(r)+'<|im_end|>'} for r in rows])
+        return build_training_dataset(rows, tok, classes)
     train_ds=convert('train'); eval_ds=convert('validation')
     dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
     model=AutoModelForCausalLM.from_pretrained(model_id,dtype=dtype,low_cpu_mem_usage=True)

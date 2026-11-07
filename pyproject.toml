@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "casestruct-lora"
 version = "0.1.0"
-description = "Locally reproducible LoRA experiment for grounded structured intake extraction"
+description = "Reproducible LoRA experiments for construction accident and OSHA injury-nature classification"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [

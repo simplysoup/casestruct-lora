@@ -1,6 +1,6 @@
 # Reported evaluation results (v2.1)
 
-These metrics were supplied from a completed v2.1 run and have **not** been reproduced inside the packaged source snapshot. They are exploratory: earlier performance inspection means the test set is not pristine.
+These metrics were recovered from the saved v2.1 reports in the adjacent `casestruct-lora-old` archive; the evaluation was not rerun. They are exploratory: earlier performance inspection means the test set is not pristine. The OSHA result is the stronger headline; ConstructCIE's small N and +1.7 pp lower CI bound make that gain suggestive, not solid.
 
 | Task | System | Accuracy | Macro F1 | Strict JSON |
 |---|---|---:|---:|---:|
@@ -25,4 +25,8 @@ These metrics were supplied from a completed v2.1 run and have **not** been repr
 
 **Paired bootstrap headline (10,000 resamples, seed 71):** ConstructCIE, v2-constrained minus strongest non-v2 (v1-zero): accuracy +11.3 pp [2.5, 21.2], macro F1 +11.0 pp [1.7, 21.1]. OSHA, v2-constrained minus strongest non-v2 (base few-shot): accuracy +11.4 pp [7.5, 15.6], macro F1 +16.0 pp [9.2, 22.1]. Selection of strongest baseline is retrospective; take confidence intervals as descriptive rather than fully accounting for model-selection uncertainty.
 
-For full confidence intervals per method, run `bash run.sh evaluate` locally and open `reports/v2.1/summary.md` and `statistics.json`. No raw benchmark narratives are bundled.
+Full paired-bootstrap estimates and confidence intervals, sanitized metrics, per-class scores, and confusion counts for all nine methods are in [`results-aggregate.json`](results-aggregate.json). Run `bash run.sh evaluate` locally to reproduce them from the required data and adapters; the v2-constrained matrices are visualized in [`confusion-matrices-v2.svg`](confusion-matrices-v2.svg). Headline values are in [`results-summary.json`](results-summary.json) and [`results-summary.svg`](results-summary.svg). To export another saved report bundle without copying its per-example files, run `python scripts/export_aggregate_reports.py /path/to/reports/v2.1`. The adjacent archive contains offline W&B run data, but no verified public W&B URL was supplied. Raw benchmark narratives and per-example predictions are not bundled.
+
+## Clean holdout
+
+These evaluation numbers must not be presented as clean-holdout performance. The next credible estimate requires a new sample collected or designated after freezing the model, labels, preprocessing, and evaluation plan. Keep it out of development and model selection; group duplicate or related incidents; document sampling and adjudication; evaluate frozen systems once; and publish only sanitized aggregate counts, confusion matrices, and uncertainty intervals. See [`methodology.md`](methodology.md#clean-holdout-plan) for the protocol.

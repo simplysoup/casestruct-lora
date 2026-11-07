@@ -1,0 +1,2733 @@
+{
+  "provenance": {
+    "source": "saved v2.1 aggregate reports",
+    "raw_narratives_included": false,
+    "test_sha256": "78797cdee98b355e55e23b9bc8d0756abb9c499fcb46c7d6e7a48f5ce6d2a8d7"
+  },
+  "statistics": {
+    "constructcie": {
+      "n": 80,
+      "headline_model": "v2-constrained",
+      "strongest_baseline": "v1-zero",
+      "systems": {
+        "base-zero": {
+          "point": {
+            "accuracy": 0.0625,
+            "macro_f1": 0.12992884308673783
+          },
+          "ci95": {
+            "accuracy": [
+              0.0125,
+              0.125
+            ],
+            "macro_f1": [
+              0.027777777777777776,
+              0.23604024265208473
+            ]
+          }
+        },
+        "base-fewshot": {
+          "point": {
+            "accuracy": 0.75,
+            "macro_f1": 0.7229208259390714
+          },
+          "ci95": {
+            "accuracy": [
+              0.65,
+              0.8375
+            ],
+            "macro_f1": [
+              0.6243901462426151,
+              0.8090196766992613
+            ]
+          }
+        },
+        "base-constrained": {
+          "point": {
+            "accuracy": 0.75,
+            "macro_f1": 0.7518479105803142
+          },
+          "ci95": {
+            "accuracy": [
+              0.65,
+              0.8375
+            ],
+            "macro_f1": [
+              0.6530216207921432,
+              0.8365426607706019
+            ]
+          }
+        },
+        "v1-zero": {
+          "point": {
+            "accuracy": 0.825,
+            "macro_f1": 0.8213889440911499
+          },
+          "ci95": {
+            "accuracy": [
+              0.7375,
+              0.9
+            ],
+            "macro_f1": [
+              0.724063851740851,
+              0.9014136295069942
+            ]
+          }
+        },
+        "v1-fewshot": {
+          "point": {
+            "accuracy": 0.775,
+            "macro_f1": 0.7280494759404558
+          },
+          "ci95": {
+            "accuracy": [
+              0.675,
+              0.8625
+            ],
+            "macro_f1": [
+              0.6311260784163966,
+              0.8172012672345825
+            ]
+          }
+        },
+        "v1-constrained": {
+          "point": {
+            "accuracy": 0.8125,
+            "macro_f1": 0.808361204013378
+          },
+          "ci95": {
+            "accuracy": [
+              0.725,
+              0.9
+            ],
+            "macro_f1": [
+              0.713458614864865,
+              0.8875464945116988
+            ]
+          }
+        },
+        "v2-zero": {
+          "point": {
+            "accuracy": 0.925,
+            "macro_f1": 0.9203706154581782
+          },
+          "ci95": {
+            "accuracy": [
+              0.8625,
+              0.975
+            ],
+            "macro_f1": [
+              0.849125246904286,
+              0.9748783188341213
+            ]
+          }
+        },
+        "v2-fewshot": {
+          "point": {
+            "accuracy": 0.9,
+            "macro_f1": 0.8961563389859323
+          },
+          "ci95": {
+            "accuracy": [
+              0.825,
+              0.9625
+            ],
+            "macro_f1": [
+              0.8184830619979573,
+              0.9575244991778142
+            ]
+          }
+        },
+        "v2-constrained": {
+          "point": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9310739079760819
+          },
+          "ci95": {
+            "accuracy": [
+              0.875,
+              0.9875
+            ],
+            "macro_f1": [
+              0.8640998566472556,
+              0.9848986798853909
+            ]
+          }
+        }
+      },
+      "paired_delta": {
+        "base-zero": {
+          "accuracy": {
+            "delta": 0.875,
+            "ci95": [
+              0.7999999999999999,
+              0.9375
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.8011450648893441,
+            "ci95": [
+              0.6840871757896028,
+              0.9115477574750831
+            ]
+          }
+        },
+        "base-fewshot": {
+          "accuracy": {
+            "delta": 0.1875,
+            "ci95": [
+              0.08750000000000002,
+              0.2875000000000001
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.20815308203701055,
+            "ci95": [
+              0.10489383666317814,
+              0.31252063534845115
+            ]
+          }
+        },
+        "base-constrained": {
+          "accuracy": {
+            "delta": 0.1875,
+            "ci95": [
+              0.08750000000000002,
+              0.2875000000000001
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.17922599739576772,
+            "ci95": [
+              0.0770382224301538,
+              0.2844032930395472
+            ]
+          }
+        },
+        "v1-zero": {
+          "accuracy": {
+            "delta": 0.11250000000000004,
+            "ci95": [
+              0.025000000000000022,
+              0.2124999999999999
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.10968496388493199,
+            "ci95": [
+              0.01678120286930397,
+              0.21060502567464387
+            ]
+          }
+        },
+        "v1-fewshot": {
+          "accuracy": {
+            "delta": 0.16249999999999998,
+            "ci95": [
+              0.0625,
+              0.2749999999999999
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.20302443203562615,
+            "ci95": [
+              0.09347089686797258,
+              0.31185899199330436
+            ]
+          }
+        },
+        "v1-constrained": {
+          "accuracy": {
+            "delta": 0.125,
+            "ci95": [
+              0.03749999999999998,
+              0.22499999999999998
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.12271270396270395,
+            "ci95": [
+              0.028519858305259476,
+              0.22101107738308645
+            ]
+          }
+        },
+        "v2-zero": {
+          "accuracy": {
+            "delta": 0.012499999999999956,
+            "ci95": [
+              0.0,
+              0.03750000000000009
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.010703292517903695,
+            "ci95": [
+              0.0,
+              0.036959766027646564
+            ]
+          }
+        },
+        "v2-fewshot": {
+          "accuracy": {
+            "delta": 0.03749999999999998,
+            "ci95": [
+              -0.03749999999999998,
+              0.11250000000000004
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.03491756899014964,
+            "ci95": [
+              -0.04437506135885619,
+              0.11521981303707148
+            ]
+          }
+        }
+      }
+    },
+    "osha": {
+      "n": 333,
+      "headline_model": "v2-constrained",
+      "strongest_baseline": "base-fewshot",
+      "systems": {
+        "base-zero": {
+          "point": {
+            "accuracy": 0.009009009009009009,
+            "macro_f1": 0.0230230064598115
+          },
+          "ci95": {
+            "accuracy": [
+              0.0,
+              0.021021021021021023
+            ],
+            "macro_f1": [
+              0.0,
+              0.057374363087345226
+            ]
+          }
+        },
+        "base-fewshot": {
+          "point": {
+            "accuracy": 0.7507507507507507,
+            "macro_f1": 0.6401132913412544
+          },
+          "ci95": {
+            "accuracy": [
+              0.7027027027027027,
+              0.7957957957957958
+            ],
+            "macro_f1": [
+              0.5920074173181031,
+              0.6842781106439478
+            ]
+          }
+        },
+        "base-constrained": {
+          "point": {
+            "accuracy": 0.6426426426426426,
+            "macro_f1": 0.3686049123778104
+          },
+          "ci95": {
+            "accuracy": [
+              0.5915915915915916,
+              0.6906906906906907
+            ],
+            "macro_f1": [
+              0.3487977496108614,
+              0.38741708931729596
+            ]
+          }
+        },
+        "v1-zero": {
+          "point": {
+            "accuracy": 0.4864864864864865,
+            "macro_f1": 0.3423305048161403
+          },
+          "ci95": {
+            "accuracy": [
+              0.43243243243243246,
+              0.5405405405405406
+            ],
+            "macro_f1": [
+              0.32098634552898947,
+              0.36232589174391505
+            ]
+          }
+        },
+        "v1-fewshot": {
+          "point": {
+            "accuracy": 0.7237237237237237,
+            "macro_f1": 0.6260524234769951
+          },
+          "ci95": {
+            "accuracy": [
+              0.6726726726726727,
+              0.7717717717717718
+            ],
+            "macro_f1": [
+              0.5670168193077032,
+              0.6751071368274288
+            ]
+          }
+        },
+        "v1-constrained": {
+          "point": {
+            "accuracy": 0.6096096096096096,
+            "macro_f1": 0.36724538876198104
+          },
+          "ci95": {
+            "accuracy": [
+              0.5555555555555556,
+              0.6606606606606606
+            ],
+            "macro_f1": [
+              0.343904109574973,
+              0.3920357456898616
+            ]
+          }
+        },
+        "v2-zero": {
+          "point": {
+            "accuracy": 0.8648648648648649,
+            "macro_f1": 0.8002157207545715
+          },
+          "ci95": {
+            "accuracy": [
+              0.8287537537537538,
+              0.8978978978978979
+            ],
+            "macro_f1": [
+              0.7418768391968836,
+              0.8445273737118864
+            ]
+          }
+        },
+        "v2-fewshot": {
+          "point": {
+            "accuracy": 0.8438438438438438,
+            "macro_f1": 0.7611011006907722
+          },
+          "ci95": {
+            "accuracy": [
+              0.8018018018018018,
+              0.8798798798798799
+            ],
+            "macro_f1": [
+              0.7133189429683874,
+              0.8000072706288651
+            ]
+          }
+        },
+        "v2-constrained": {
+          "point": {
+            "accuracy": 0.8648648648648649,
+            "macro_f1": 0.8005140940116136
+          },
+          "ci95": {
+            "accuracy": [
+              0.8287537537537538,
+              0.8978978978978979
+            ],
+            "macro_f1": [
+              0.7422609064960503,
+              0.8449158925665765
+            ]
+          }
+        }
+      },
+      "paired_delta": {
+        "base-zero": {
+          "accuracy": {
+            "delta": 0.8558558558558559,
+            "ci95": [
+              0.8168168168168168,
+              0.8918918918918919
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.7774910875518021,
+            "ci95": [
+              0.71088235466867,
+              0.8308042148029207
+            ]
+          }
+        },
+        "base-fewshot": {
+          "accuracy": {
+            "delta": 0.1141141141141142,
+            "ci95": [
+              0.07507507507507505,
+              0.15615615615615608
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.16040080267035917,
+            "ci95": [
+              0.09230644480452564,
+              0.22079664541077748
+            ]
+          }
+        },
+        "base-constrained": {
+          "accuracy": {
+            "delta": 0.22222222222222232,
+            "ci95": [
+              0.17717717717717718,
+              0.2702702702702703
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.43190918163380315,
+            "ci95": [
+              0.3721086598565719,
+              0.47751099495703075
+            ]
+          }
+        },
+        "v1-zero": {
+          "accuracy": {
+            "delta": 0.3783783783783784,
+            "ci95": [
+              0.32432432432432434,
+              0.4324324324324324
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.45818358919547325,
+            "ci95": [
+              0.39771366591010937,
+              0.5054223058184659
+            ]
+          }
+        },
+        "v1-fewshot": {
+          "accuracy": {
+            "delta": 0.14114114114114118,
+            "ci95": [
+              0.10210210210210202,
+              0.18318318318318316
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.17446167053461847,
+            "ci95": [
+              0.11295122363112776,
+              0.23496218179642406
+            ]
+          }
+        },
+        "v1-constrained": {
+          "accuracy": {
+            "delta": 0.2552552552552553,
+            "ci95": [
+              0.2072072072072072,
+              0.30330330330330335
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.4332687052496325,
+            "ci95": [
+              0.37469146855017044,
+              0.4785729384517318
+            ]
+          }
+        },
+        "v2-zero": {
+          "accuracy": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.00029837325704207274,
+            "ci95": [
+              -0.000219276622667533,
+              0.0014762341957359258
+            ]
+          }
+        },
+        "v2-fewshot": {
+          "accuracy": {
+            "delta": 0.021021021021021102,
+            "ci95": [
+              0.0,
+              0.04504504504504503
+            ]
+          },
+          "macro_f1": {
+            "delta": 0.03941299332084136,
+            "ci95": [
+              -0.00361301090899066,
+              0.0788281658133992
+            ]
+          }
+        }
+      }
+    }
+  },
+  "runs": {
+    "base-constrained": {
+      "model": "base",
+      "method": "constrained",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.75,
+          "macro_f1": 0.7518479105803141,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.5217391304347826,
+              "recall": 0.6666666666666666,
+              "f1": 0.5853658536585366
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.9629629629629629,
+              "recall": 0.8125,
+              "f1": 0.8813559322033898
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.6426426426426426,
+          "macro_f1": 0.3686049123778104,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.6944444444444444,
+              "recall": 0.7142857142857143,
+              "f1": 0.704225352112676
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.23636363636363636,
+              "recall": 0.9629629629629629,
+              "f1": 0.3795620437956204
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9057971014492754,
+              "recall": 0.8278145695364238,
+              "f1": 0.8650519031141869
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 12,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 6,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 1,
+              "electrocution": 10,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 4,
+              "electrocution": 0,
+              "fall": 26,
+              "struck-by": 2,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 6,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 12,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 21,
+              "Cuts, lacerations, punctures without injury to internal structures": 11,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 50,
+              "Cuts, lacerations, punctures without injury to internal structures": 14,
+              "Fractures": 6,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 26,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 26,
+              "Fractures": 125,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 5,
+              "Fractures": 3,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 8,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 20,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "base-fewshot": {
+      "model": "base",
+      "method": "fewshot",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.75,
+          "macro_f1": 0.7229208259390713,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.8333333333333334,
+              "recall": 0.2777777777777778,
+              "f1": 0.4166666666666667
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.90625,
+              "recall": 0.90625,
+              "f1": 0.90625
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.4838709677419355,
+              "recall": 0.8333333333333334,
+              "f1": 0.6122448979591837
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.7507507507507507,
+          "macro_f1": 0.6401132913412545,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0.6666666666666666,
+              "recall": 0.058823529411764705,
+              "f1": 0.10810810810810811
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.6703296703296703,
+              "recall": 0.8714285714285714,
+              "f1": 0.7577639751552795
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.75,
+              "recall": 0.6666666666666666,
+              "f1": 0.7058823529411765
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.8933333333333333,
+              "recall": 0.8874172185430463,
+              "f1": 0.8903654485049833
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.10526315789473684,
+              "recall": 0.25,
+              "f1": 0.14814814814814814
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0.48,
+              "recall": 0.5454545454545454,
+              "f1": 0.5106382978723404
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 5,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 13,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 29,
+              "struck-by": 3,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 1,
+              "electrocution": 0,
+              "fall": 2,
+              "struck-by": 15,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 2,
+              "Amputations, avulsions, enucleations unspecified": 30,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 61,
+              "Cuts, lacerations, punctures without injury to internal structures": 1,
+              "Fractures": 3,
+              "Fractures and surface, flesh wounds": 4,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 18,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 1,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 7,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 1,
+              "Fractures": 134,
+              "Fractures and surface, flesh wounds": 11,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 5,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 5,
+              "Fractures and surface, flesh wounds": 2,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 1,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 8,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 4,
+              "Fractures": 5,
+              "Fractures and surface, flesh wounds": 1,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 12,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "base-zero": {
+      "model": "base",
+      "method": "zero",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.0625,
+          "macro_f1": 0.12992884308673783,
+          "strict_json_rate": 0.0625,
+          "allowed_label_rate": 0.0625,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.05555555555555555,
+              "f1": 0.10526315789473684
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385
+            },
+            "fall": {
+              "support": 32,
+              "precision": 1.0,
+              "recall": 0.03125,
+              "f1": 0.06060606060606061
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.2
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.009009009009009009,
+          "macro_f1": 0.0230230064598115,
+          "strict_json_rate": 0.009009009009009009,
+          "allowed_label_rate": 0.009009009009009009,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 1.0,
+              "recall": 0.014285714285714285,
+              "f1": 0.028169014084507043
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 1.0,
+              "recall": 0.006622516556291391,
+              "f1": 0.013157894736842105
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "f1": 0.14285714285714285
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 1,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 0,
+              "<INVALID>": 17
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 1,
+              "fall": 0,
+              "struck-by": 0,
+              "<INVALID>": 11
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 31
+            },
+            "struck-by": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 2,
+              "<INVALID>": 16
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 34
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 69
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 27
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 150
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 8
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 1,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 12
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 8
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 22
+            }
+          }
+        }
+      }
+    },
+    "v1-constrained": {
+      "model": "v1",
+      "method": "constrained",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.8125,
+          "macro_f1": 0.808361204013378,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.7333333333333333,
+              "recall": 0.6111111111111112,
+              "f1": 0.6666666666666666
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.8787878787878788,
+              "recall": 0.90625,
+              "f1": 0.8923076923076924
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.6666666666666666,
+              "recall": 0.7777777777777778,
+              "f1": 0.717948717948718
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.6096096096096096,
+          "macro_f1": 0.36724538876198104,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 1.0,
+              "recall": 0.029411764705882353,
+              "f1": 0.05714285714285714
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.6865671641791045,
+              "recall": 0.6571428571428571,
+              "f1": 0.6715328467153284
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.21311475409836064,
+              "recall": 0.9629629629629629,
+              "f1": 0.348993288590604
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9669421487603306,
+              "recall": 0.7748344370860927,
+              "f1": 0.8602941176470589
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 11,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 6,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 2,
+              "electrocution": 0,
+              "fall": 29,
+              "struck-by": 1,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 2,
+              "electrocution": 0,
+              "fall": 2,
+              "struck-by": 14,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 19,
+              "Cuts, lacerations, punctures without injury to internal structures": 13,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 46,
+              "Cuts, lacerations, punctures without injury to internal structures": 19,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 3,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 26,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 28,
+              "Fractures": 117,
+              "Fractures and surface, flesh wounds": 5,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 1,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 7,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 8,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 21,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "v1-fewshot": {
+      "model": "v1",
+      "method": "fewshot",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.775,
+          "macro_f1": 0.7280494759404559,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.2222222222222222,
+              "f1": 0.36363636363636365
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.8857142857142857,
+              "recall": 0.96875,
+              "f1": 0.9253731343283582
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.5333333333333333,
+              "recall": 0.8888888888888888,
+              "f1": 0.6666666666666666
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.7237237237237237,
+          "macro_f1": 0.6260524234769951,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0.6,
+              "recall": 0.08823529411764706,
+              "f1": 0.15384615384615385
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.6741573033707865,
+              "recall": 0.8571428571428571,
+              "f1": 0.7547169811320755
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.59375,
+              "recall": 0.7037037037037037,
+              "f1": 0.6440677966101694
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9323308270676691,
+              "recall": 0.8211920529801324,
+              "f1": 0.8732394366197183
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.16666666666666666,
+              "recall": 0.5,
+              "f1": 0.25
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.96
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0.3793103448275862,
+              "recall": 0.5,
+              "f1": 0.43137254901960786
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 4,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 13,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 31,
+              "struck-by": 1,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 2,
+              "struck-by": 16,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 3,
+              "Amputations, avulsions, enucleations unspecified": 29,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 1,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 2,
+              "Amputations, avulsions, enucleations unspecified": 60,
+              "Cuts, lacerations, punctures without injury to internal structures": 2,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 4,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 19,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 8,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 6,
+              "Fractures": 124,
+              "Fractures and surface, flesh wounds": 13,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 8,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 4,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 2,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 12,
+              "Thermal burns degree unspecified": 1,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 8,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 5,
+              "Fractures": 4,
+              "Fractures and surface, flesh wounds": 2,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 11,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "v1-zero": {
+      "model": "v1",
+      "method": "zero",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.825,
+          "macro_f1": 0.8213889440911499,
+          "strict_json_rate": 0.9875,
+          "allowed_label_rate": 0.9875,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.75,
+              "recall": 0.6666666666666666,
+              "f1": 0.7058823529411765
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 0.9166666666666666,
+              "recall": 0.9166666666666666,
+              "f1": 0.9166666666666666
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.90625,
+              "recall": 0.90625,
+              "f1": 0.90625
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.7368421052631579,
+              "recall": 0.7777777777777778,
+              "f1": 0.7567567567567568
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.4864864864864865,
+          "macro_f1": 0.3423305048161403,
+          "strict_json_rate": 0.984984984984985,
+          "allowed_label_rate": 0.7867867867867868,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.7076923076923077,
+              "recall": 0.6571428571428571,
+              "f1": 0.6814814814814815
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.2358490566037736,
+              "recall": 0.9259259259259259,
+              "f1": 0.37593984962406013
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 1.0,
+              "recall": 0.5165562913907285,
+              "f1": 0.6812227074235808
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 12,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 5,
+              "<INVALID>": 1
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 2,
+              "electrocution": 1,
+              "fall": 29,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 2,
+              "electrocution": 0,
+              "fall": 2,
+              "struck-by": 14,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 18,
+              "Cuts, lacerations, punctures without injury to internal structures": 14,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 2
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 46,
+              "Cuts, lacerations, punctures without injury to internal structures": 18,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 6
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 25,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 1
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 18,
+              "Fractures": 78,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 55
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 4,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 4
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 7,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 1
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 20,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 2
+            }
+          }
+        }
+      }
+    },
+    "v2-constrained": {
+      "model": "v2",
+      "method": "constrained",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.9375,
+          "macro_f1": 0.9310739079760819,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.8571428571428571,
+              "recall": 1.0,
+              "f1": 0.9230769230769231
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.9411764705882353,
+              "recall": 1.0,
+              "f1": 0.9696969696969697
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.8648648648648649,
+          "macro_f1": 0.8005140940116136,
+          "strict_json_rate": null,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0.625,
+              "recall": 0.14705882352941177,
+              "f1": 0.23809523809523808
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.7083333333333334,
+              "recall": 0.9714285714285714,
+              "f1": 0.8192771084337349
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.9259259259259259,
+              "recall": 0.9259259259259259,
+              "f1": 0.9259259259259259
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9483870967741935,
+              "recall": 0.9735099337748344,
+              "f1": 0.9607843137254902
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.5555555555555556,
+              "recall": 0.625,
+              "f1": 0.5882352941176471
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 1.0,
+              "recall": 0.7727272727272727,
+              "f1": 0.8717948717948718
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 18,
+              "electrocution": 0,
+              "fall": 0,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 32,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 3,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 14,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 5,
+              "Amputations, avulsions, enucleations unspecified": 28,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 2,
+              "Amputations, avulsions, enucleations unspecified": 68,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 25,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 147,
+              "Fractures and surface, flesh wounds": 4,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 3,
+              "Fractures and surface, flesh wounds": 5,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 8,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 2,
+              "Fractures": 3,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 17,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "v2-fewshot": {
+      "model": "v2",
+      "method": "fewshot",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.9,
+          "macro_f1": 0.8961563389859323,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.7222222222222222,
+              "f1": 0.8387096774193549
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.9117647058823529,
+              "recall": 0.96875,
+              "f1": 0.9393939393939394
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 0.7727272727272727,
+              "recall": 0.9444444444444444,
+              "f1": 0.85
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.8438438438438438,
+          "macro_f1": 0.7611011006907721,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 1.0,
+              "recall": 0.029411764705882353,
+              "f1": 0.05714285714285714
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.6796116504854369,
+              "recall": 1.0,
+              "f1": 0.8092485549132948
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.8928571428571429,
+              "recall": 0.9259259259259259,
+              "f1": 0.9090909090909091
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9724137931034482,
+              "recall": 0.9337748344370861,
+              "f1": 0.9527027027027027
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.3684210526315789,
+              "recall": 0.875,
+              "f1": 0.5185185185185185
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 1.0,
+              "recall": 0.7272727272727273,
+              "f1": 0.8421052631578947
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 13,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 4,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 31,
+              "struck-by": 1,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 17,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 32,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 70,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 25,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 2,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 141,
+              "Fractures and surface, flesh wounds": 10,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 7,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 8,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 1,
+              "Cuts, lacerations, punctures without injury to internal structures": 3,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 16,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    },
+    "v2-zero": {
+      "model": "v2",
+      "method": "zero",
+      "metrics": {
+        "constructcie": {
+          "count": 80,
+          "accuracy": 0.925,
+          "macro_f1": 0.9203706154581782,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "caught-in/between": {
+              "support": 18,
+              "precision": 0.85,
+              "recall": 0.9444444444444444,
+              "f1": 0.8947368421052632
+            },
+            "electrocution": {
+              "support": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "fall": {
+              "support": 32,
+              "precision": 0.9142857142857143,
+              "recall": 1.0,
+              "f1": 0.9552238805970149
+            },
+            "struck-by": {
+              "support": 18,
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875
+            }
+          }
+        },
+        "osha": {
+          "count": 333,
+          "accuracy": 0.8648648648648649,
+          "macro_f1": 0.8002157207545715,
+          "strict_json_rate": 1.0,
+          "allowed_label_rate": 1.0,
+          "per_label": {
+            "Amputations involving bone loss": {
+              "support": 34,
+              "precision": 0.5555555555555556,
+              "recall": 0.14705882352941177,
+              "f1": 0.23255813953488372
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "support": 70,
+              "precision": 0.7083333333333334,
+              "recall": 0.9714285714285714,
+              "f1": 0.8192771084337349
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "support": 27,
+              "precision": 0.9259259259259259,
+              "recall": 0.9259259259259259,
+              "f1": 0.9259259259259259
+            },
+            "Fractures": {
+              "support": 151,
+              "precision": 0.9545454545454546,
+              "recall": 0.9735099337748344,
+              "f1": 0.9639344262295082
+            },
+            "Fractures and surface, flesh wounds": {
+              "support": 8,
+              "precision": 0.5555555555555556,
+              "recall": 0.625,
+              "f1": 0.5882352941176471
+            },
+            "Heat exhaustion, fatigue": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Thermal burns degree unspecified": {
+              "support": 8,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "support": 22,
+              "precision": 1.0,
+              "recall": 0.7727272727272727,
+              "f1": 0.8717948717948718
+            }
+          }
+        }
+      },
+      "confusion_matrices": {
+        "constructcie": {
+          "labels": [
+            "caught-in/between",
+            "electrocution",
+            "fall",
+            "struck-by",
+            "<INVALID>"
+          ],
+          "counts": {
+            "caught-in/between": {
+              "caught-in/between": 17,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "electrocution": {
+              "caught-in/between": 0,
+              "electrocution": 11,
+              "fall": 1,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "fall": {
+              "caught-in/between": 0,
+              "electrocution": 0,
+              "fall": 32,
+              "struck-by": 0,
+              "<INVALID>": 0
+            },
+            "struck-by": {
+              "caught-in/between": 3,
+              "electrocution": 0,
+              "fall": 1,
+              "struck-by": 14,
+              "<INVALID>": 0
+            }
+          }
+        },
+        "osha": {
+          "labels": [
+            "Amputations involving bone loss",
+            "Amputations, avulsions, enucleations unspecified",
+            "Cuts, lacerations, punctures without injury to internal structures",
+            "Fractures",
+            "Fractures and surface, flesh wounds",
+            "Heat exhaustion, fatigue",
+            "Thermal burns degree unspecified",
+            "Traumatic injuries or exposures unspecified",
+            "<INVALID>"
+          ],
+          "counts": {
+            "Amputations involving bone loss": {
+              "Amputations involving bone loss": 5,
+              "Amputations, avulsions, enucleations unspecified": 28,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Amputations, avulsions, enucleations unspecified": {
+              "Amputations involving bone loss": 2,
+              "Amputations, avulsions, enucleations unspecified": 68,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Cuts, lacerations, punctures without injury to internal structures": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 25,
+              "Fractures": 1,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 147,
+              "Fractures and surface, flesh wounds": 4,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Fractures and surface, flesh wounds": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 3,
+              "Fractures and surface, flesh wounds": 5,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Heat exhaustion, fatigue": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 13,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Thermal burns degree unspecified": {
+              "Amputations involving bone loss": 0,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 0,
+              "Fractures": 0,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 8,
+              "Traumatic injuries or exposures unspecified": 0,
+              "<INVALID>": 0
+            },
+            "Traumatic injuries or exposures unspecified": {
+              "Amputations involving bone loss": 1,
+              "Amputations, avulsions, enucleations unspecified": 0,
+              "Cuts, lacerations, punctures without injury to internal structures": 2,
+              "Fractures": 2,
+              "Fractures and surface, flesh wounds": 0,
+              "Heat exhaustion, fatigue": 0,
+              "Thermal burns degree unspecified": 0,
+              "Traumatic injuries or exposures unspecified": 17,
+              "<INVALID>": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "recovered from saved v2.1 reports in the adjacent casestruct-lora-old archive; no evaluation rerun was performed",
+  "test_set_status": "inspected during development; not a pristine holdout",
+  "tasks": [
+    {
+      "name": "OSHA injury nature",
+      "n": 333,
+      "metric": "macro_f1",
+      "baseline": {"name": "base few-shot", "value": 0.640},
+      "v2": {"name": "v2 constrained", "value": 0.801},
+      "paired_bootstrap_gain_pp": 16.0,
+      "paired_bootstrap_95_ci_pp": [9.2, 22.1]
+    },
+    {
+      "name": "ConstructCIE accident type",
+      "n": 80,
+      "metric": "macro_f1",
+      "baseline": {"name": "v1 zero-shot", "value": 0.821},
+      "v2": {"name": "v2 constrained", "value": 0.931},
+      "paired_bootstrap_gain_pp": 11.0,
+      "paired_bootstrap_95_ci_pp": [1.7, 21.1]
+    }
+  ],
+  "aggregate_artifacts": "All nine methods' sanitized aggregate metrics, per-class scores, and confusion matrices are in docs/results-aggregate.json; v2-constrained matrices are visualized in docs/confusion-matrices-v2.svg.",
+  "not_included": [
+    "per-example predictions or raw narratives",
+    "public W&B run URL (no verified public run link was supplied)"
+  ]
+}
