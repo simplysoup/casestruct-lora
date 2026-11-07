@@ -32,7 +32,7 @@ This model is not intended for legal, clinical, employment, insurance, regulator
 - Base model: [`Qwen/Qwen3-0.6B`](https://huggingface.co/Qwen/Qwen3-0.6B).
 - Method: supervised fine-tuning with TRL `SFTTrainer` and PEFT LoRA; rank 8, alpha 16; completion-only loss.
 - Training data: training split prepared from ConstructCIE and an enriched OSHA Severe Injury Reports mirror. See [`docs/methodology.md`](../docs/methodology.md) for sources and terms.
-- The checked-in prompt/completion builder and TRL 0.28.0 collator were checked on one prepared v2 training example with the Qwen tokenizer: 187 prompt tokens were masked (`-100`) and 9 completion tokens were supervised. This spot check does not establish the provenance or exact training conditions for every historical batch or checkpoint.
+- The checked-in prompt/completion builder and TRL collator were tested on a batch of 32 prepared examples: every prompt token was masked (`-100`), and every token in each completion (including EOS) was supervised. This verifies the current code path, not historical checkpoint provenance.
 
 ## Reported evaluation (exploratory)
 
