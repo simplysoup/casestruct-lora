@@ -1,6 +1,6 @@
 # Reported evaluation results (v2.1)
 
-These metrics were recovered from the saved v2.1 reports in the adjacent `casestruct-lora-old` archive; the evaluation was not rerun. They are exploratory: earlier performance inspection means the test set is not pristine. The OSHA result is the stronger headline; ConstructCIE's small N and +1.7 pp lower CI bound make that gain suggestive, not solid.
+Results regenerated on 2026-11-07 from code commit 8ca6f59d1f7313cb7699e16e55b60d067e960016 using `bash run.sh evaluate`. The evaluation used the saved v2 adapters and prepared splits; it did not retrain the adapters. Earlier performance inspection means the test set is not pristine. The OSHA result is the stronger headline; ConstructCIE's small N and +1.7 pp lower CI bound make that gain suggestive, not solid.
 
 | Task | System | Accuracy | Macro F1 | Strict JSON |
 |---|---|---:|---:|---:|
