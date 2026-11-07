@@ -29,4 +29,4 @@ Full paired-bootstrap estimates and confidence intervals, sanitized metrics, per
 
 ## Clean holdout
 
-These evaluation numbers must not be presented as clean-holdout performance. The next credible estimate requires a new sample collected or designated after freezing the model, labels, preprocessing, and evaluation plan. Keep it out of development and model selection; group duplicate or related incidents; document sampling and adjudication; evaluate frozen systems once; and publish only sanitized aggregate counts, confusion matrices, and uncertainty intervals. See [`methodology.md`](methodology.md#clean-holdout-plan) for the protocol.
+No clean-holdout estimate is available. The frozen OSHA-only plan is in [`holdout-plan.md`](holdout-plan.md), committed before the source check. The latest public OSHA mirror is revision `7831d39a5aec52755cbf24b5352557c17f207938`, last modified 2026-05-31; its event dates end at 2025-08-31, so it has no records in the plan's 2026-01-01 through 2026-06-30 window. Per the frozen plan, no substitute period was selected and the inspected test set was not reused. The previous results remain exploratory, not clean-holdout estimates.
